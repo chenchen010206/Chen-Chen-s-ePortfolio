@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Information</title>
+	<link id="theme-style" rel="stylesheet" href="css/style1.css">
+</head>
+<body id="basic-info-page">
+    <header>
+        <h1>Basic Information</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+				<li><a href="information.html">Basic Information</a></li>
+                <li><a href="interest.html">Personal Interest</a></li>
+                <li><a href="education.html">Educational Background</a></li>
+                <li><a href="experience.html">Working Experience</a></li>
+                <li><a href="journey.html">Journey</a></li>
+            </ul>
+			<button class="theme-switch" onclick="switchTheme()">Switch Theme</button>
+        </nav>
+    </header>
+	
+	<script>
+    function switchTheme() {
+        let themeLink = document.getElementById("theme-style");
+        let currentTheme = themeLink.getAttribute("href") === "css/style1.css" ? "css/style2.css" : "css/style1.css";
+
+        themeLink.setAttribute("href", currentTheme);
+        localStorage.setItem("theme", currentTheme);
+    }
+
+    // Load saved theme on page load
+    window.onload = function() {
+        let savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+            document.getElementById("theme-style").setAttribute("href", savedTheme);
+        }
+    };
+	</script>
+
+    <section>
+        <img src="image/chenchen.jpg" alt="My Photo" width="500">
+		<h2>My Name</h2>
+		<p>My name, Chen Chen, carries a special meaning. In Chinese, the character "Chen" means "to choose, recognize, or be real". It represents uniqueness, authenticity, and excellence. When repeated, "Chen Chen" strengthens these qualities, symbolizing sincerity, attentiveness, and individuality.</p>
+		<p>To me, my name is a reminder to stay true to myself, pay attention to details, and always strive for the best. It reflects the values of genuineness, uniqueness, and thoughtfulness in life.</p>
+
+		<img src="image/aquarius.jpg" alt="Aquarius" width="400">
+		<h2>My Birthday</h2>
+		<p>I was born on February 6, 2001, under the zodiac sign Aquarius, known for its independence, creativity, and open-minded nature. Aquarians are free-spirited and curious, always seeking new experiences and thinking outside the box. They value originality, deep connections, and the pursuit of knowledge.</p>
+		<p>People born on this date are often forward-thinking and innovative, embracing change and striving to make a difference. Known as the water bearer, Aquarius symbolizes progress, knowledge, and the desire to help others, reflecting my passion for innovation and meaningful connections. With a strong desire for growth, I always look for ways to learn and evolve.<p>
+		<p>Beyond zodiac meanings, my birthday represents my individuality and passion for discovery. It reminds me to stay true to who I am, embrace challenges, and never stop seeking new possibilities.</p>
+
+		<img src="image/kuching.jpg" alt="Aquarius" width="500">
+		<h2>My Hometown</h2>
+		<p>I come from Kuching, the capital of Sarawak, Malaysia, a city known for its unique charm, rich culture, and beautiful landscapes. Often called the “Cat City”, Kuching is a place where history, nature, and modern development blend harmoniously.</p>
+		<p>The city is famous for its delicious local food, such as Sarawak laksa, kolo mee, and kek lapis. It is also home to stunning riverside views, vibrant markets, and historical landmarks like the Sarawak River Waterfront and Fort Margherita. Surrounded by lush greenery, including national parks and wildlife sanctuaries, Kuching is a gateway to exploring Borneo’s natural beauty.</p>
+		<p>Beyond its attractions, what makes Kuching truly special is its friendly and welcoming people. The city’s peaceful atmosphere and strong sense of community make it a wonderful place to live and grow. No matter where I go, Kuching will always be my home.</p> 
+    </section>
+
+    <footer>
+        <p>&copy; 2025 ChenChen's ePortfolio</p>
+    </footer>
+</body>
+</html>

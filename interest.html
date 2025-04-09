@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Interest</title>
+	<link id="theme-style" rel="stylesheet" href="css/style1.css">
+</head>
+<body id="personal-interest-page">
+    <header>
+        <h1>Personal Interest</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+				<li><a href="information.html">Basic Information</a></li>
+                <li><a href="interest.html">Personal Interest</a></li>
+                <li><a href="education.html">Educational Background</a></li>
+                <li><a href="experience.html">Working Experience</a></li>
+                <li><a href="journey.html">Journey</a></li>
+            </ul>
+			<button class="theme-switch" onclick="switchTheme()">Switch Theme</button>
+        </nav>
+    </header>
+	
+	<script>
+    function switchTheme() {
+        let themeLink = document.getElementById("theme-style");
+        let currentTheme = themeLink.getAttribute("href") === "css/style1.css" ? "css/style2.css" : "css/style1.css";
+
+        themeLink.setAttribute("href", currentTheme);
+        localStorage.setItem("theme", currentTheme);
+    }
+
+    // Load saved theme on page load
+    window.onload = function() {
+        let savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+            document.getElementById("theme-style").setAttribute("href", savedTheme);
+        }
+    };
+	</script>
+
+   <section id="personal-interest-content">
+    <div class="interest-section">
+        <img src="image/craft.jpg" alt="Craft & DIY">
+        <div class="interest-text">
+            <h2>Craft & DIY Creations</h2>
+            <p>✔ Occasionally making handmade cards for special occasions</p>
+            <p>✔ Trying out flower wrapping for gifts</p>
+            <p>✔ Doing DIY projects like creating simple presents</p>
+            <p>✔ Exploring different craft ideas when inspired</p>
+            <p>✔ Decorating and personalizing everyday items</p>
+            <p>✔ Experimenting with different materials for creative projects</p>
+            <p>✔ Enjoying hands-on activities like paper crafting and simple decorations</p>
+        </div>
+    </div>
+
+    <div class="interest-section">
+        <img src="image/design.jpg" alt="Design & Aesthetics">
+        <div class="interest-text">
+            <h2>Design & Aesthetics</h2>
+            <p>✔ Designed clothes with unique patterns and details</p>
+            <p>✔ Created decorations for different occasions</p>
+            <p>✔ Styled and arranged home décor</p>
+            <p>✔ Designed and structured websites with a creative touch</p>
+            <p>✔ Crafted visually appealing presentation slides</p>
+            <p>✔ Enjoy bringing ideas to life through design</p>
+        </div>
+    </div>
+
+    <div class="interest-section">
+        <img src="image/lego.jpg" alt="LEGO & Model Building">
+        <div class="interest-text">
+            <h2>LEGO & Model Building</h2>
+            <p>✔ Enjoy assembling LEGO sets for fun and creativity</p>
+            <p>✔ Experiment with different designs and structures</p>
+            <p>✔ Build custom creations beyond instruction manuals</p>
+            <p>✔ Make and construct models with attention to detail</p>
+            <p>✔ Appreciate the challenge of complex builds</p>
+        </div>
+    </div>
+
+    <div class="interest-section">
+        <img src="image/cooking.jpg" alt="Culinary & Cooking">
+        <div class="interest-text">
+            <h2>Culinary & Cooking</h2>
+            <p>✔ Enjoy trying out different cooking techniques</p>
+            <p>✔ Experiment with recipes and flavors</p>
+            <p>✔ Occasionally bake or cook for fun</p>
+            <p>✔ Appreciate well-presented and tasty dishes</p>
+            <p>✔ Find joy in making homemade meals</p>
+        </div>
+    </div>
+
+    <div class="interest-section">
+        <img src="image/finance.jpg" alt="Finance">
+        <div class="interest-text">
+            <h2>Finance</h2>
+            <p>✔ Studied finance at the degree level</p>
+            <p>✔ Experienced in financial analysis and evaluations</p>
+            <p>✔ Interested in understanding market trends and data</p>
+            <p>✔ Enjoy analyzing financial information for insights</p>
+            <p>✔ Appreciate the role of finance in decision-making</p>
+        </div>
+    </div>
+
+    <div class="interest-section">
+        <img src="image/technology.jpg" alt="Information Technology">
+        <div class="interest-text">
+            <h2>Information Technology (IT)</h2>
+            <p>✔ Pursuing a Master’s in Information Technology Management</p>
+            <p>✔ Inspired by how IT professionals create and solve problems</p>
+            <p>✔ Interested in website design and digital solutions</p>
+            <p>✔ Appreciate the logic and creativity behind technology</p>
+            <p>✔ Enjoy exploring how IT enhances different fields</p>
+        </div>
+    </div>
+	</section>
+
+    <footer>
+        <p>&copy; 2025 ChenChen's ePortfolio</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working Experience</title>
+	<link id="theme-style" rel="stylesheet" href="css/style1.css">
+</head>
+<body id="working-experience-page">
+    <header>
+        <h1>Working Experience</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+				<li><a href="information.html">Basic Information</a></li>
+                <li><a href="interest.html">Personal Interest</a></li>
+                <li><a href="education.html">Educational Background</a></li>
+                <li><a href="experience.html">Working Experience</a></li>
+                <li><a href="journey.html">Journey</a></li>
+            </ul>
+			<button class="theme-switch" onclick="switchTheme()">Switch Theme</button>
+        </nav>
+    </header>
+	
+	<script>
+    function switchTheme() {
+        let themeLink = document.getElementById("theme-style");
+        let currentTheme = themeLink.getAttribute("href") === "css/style1.css" ? "css/style2.css" : "css/style1.css";
+
+        themeLink.setAttribute("href", currentTheme);
+        localStorage.setItem("theme", currentTheme);
+    }
+
+    // Load saved theme on page load
+    window.onload = function() {
+        let savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+            document.getElementById("theme-style").setAttribute("href", savedTheme);
+        }
+    };
+	</script>
+
+	<section class="job-container">
+    <div class="job-card">
+        <h2>RETAIL ASSISTANT (PART TIME)</h2>
+		<img src="image/future.jpg" alt="Future Stationery Supplies" width="500">
+		<p>🏢 Company: Future Stationery Supplies		
+		<p>📆 Period: January 2019 – April 2019
+		<p>📌 Job Description:</p>
+		<p>✅ Assisted customers in finding stationery products and making purchase decisions</p>
+		<p>✅ Provided product information and recommendations to customers</p>
+		<p>✅ Operated the cash register, processed payments, and handled transactions</p>
+		<p>✅ Restocked shelves and ensured proper arrangement of products</p>
+		<p>✅ Managed inventory and reported low-stock items to supervisors</p>
+		<p>✅ Maintained store cleanliness and organized product displays</p>
+		<p>✅ Assisted in unpacking and arranging new stock arrivals</p>
+		<p>✅ Handled customer inquiries and resolved basic complaints</p>
+	</div>
+		
+	<div class="job-card">
+		<h2>PROMOTER (PART TIME)</h2>
+		<img src="image/lh.jpg" alt="Lana Hera Kids" width="500">
+		<p>🏢 Company: Lana Hera Kids</p>	
+		<p>📆 Period: February 2022 – January 2023</p>
+		<p>📌 Job Description:</p>
+		<p>✅ Promoted and demonstrated baby products, including clothing and accessories</p>
+		<p>✅ Assisted parents in selecting suitable products based on their needs</p>
+		<p>✅ Provided product recommendations and explained features and benefits</p>
+		<p>✅ Engaged with customers to increase brand awareness and customer loyalty</p>
+		<p>✅ Set up and maintained an attractive product display to attract buyers</p>
+		<p>✅ Managed stock levels, restocked shelves, and ensured product availability</p>
+		<p>✅ Processed sales transactions and handled customer inquiries</p>
+		<p>✅ Collected customer feedback and provided suggestions for product improvements</p>
+	</div>
+	
+	<div class="job-card">
+		<h2>PRODUCT PROMOTER (PART TIME)</h2>
+		<img src="image/rv.jpg" alt="Red Velvet" width="500">
+		<p>🏢 Company: Red Velvet Event Management</p>
+		<p>📆 Period: March 2022 – April 2023</p>
+		<p>📌 Job Description:</p>
+		<p>✅ Promoted and demonstrated products at events, roadshows, and retail locations</p>
+		<p>✅ Engaged with potential customers to increase brand awareness and boost sales</p>
+		<p>✅ Explained product features, benefits, and usage to customers</p>
+		<p>✅ Distributed samples, brochures, and promotional materials to attract interest</p>
+		<p>✅ Assisted in setting up and maintaining eye-catching promotional booths</p>
+		<p>✅ Conducted live product demonstrations to showcase product quality</p>
+		<p>✅ Collected customer feedback and provided insights for marketing improvements</p>
+		<p>✅ Helped track daily sales performance and reported results to the supervisor</p>
+	</div>	
+		
+	<div class="job-card">
+		<h2>INTERN</h2>
+		<img src="image/seb.jpg" alt="SEB" width="500">
+		<p>🏢 Company: Sarawak Energy Berhad</p>
+		<p>📅 Period: August 2023 – October 2023</p>
+		<p>📌 Job Description:</p>
+		<p>✅ Fixed Deposit (FD) Rates Compilation</p>
+		<p>✅ Fixed Deposit (FD) Rates Negotiation</p>
+		<p>✅ Additional Fixed Deposit Savings Computation</p>
+		<p>✅ Unit Trust Funds (UTF) Rates Computation</p>
+		<p>✅ Gearing Ratio Computation</p>
+		<p>✅ Preparation of Payment Request Form (PRF)</p>
+		<p>✅ Loan Interest Schedule and Intercompany Billing Compilation</p>
+		<p>✅ Preparation of Cash Flow</p>
+	</div>
+	</section>
+
+    <footer>
+        <p>&copy; 2025 ChenChen's ePortfolio</p>
+    </footer>
+</body>
+</html>

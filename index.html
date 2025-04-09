@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My ePortfolio</title>
+	<link id="theme-style" rel="stylesheet" href="css/style1.css">
+</head>
+<body id="home-page">
+    <header>
+        <h1>My ePortfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+				<li><a href="information.html">Basic Information</a></li>
+                <li><a href="interest.html">Personal Interest</a></li>
+                <li><a href="education.html">Educational Background</a></li>
+                <li><a href="experience.html">Working Experience</a></li>
+                <li><a href="journey.html">Journey</a></li>
+            </ul>
+			<button class="theme-switch" onclick="switchTheme()">Switch Theme</button>
+        </nav>
+    </header>
+	
+	<script>
+    function switchTheme() {
+        let themeLink = document.getElementById("theme-style");
+        let currentTheme = themeLink.getAttribute("href") === "css/style1.css" ? "css/style2.css" : "css/style1.css";
+
+        themeLink.setAttribute("href", currentTheme);
+        localStorage.setItem("theme", currentTheme);
+    }
+
+    // Load saved theme on page load
+    window.onload = function() {
+        let savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+            document.getElementById("theme-style").setAttribute("href", savedTheme);
+        }
+    };
+</script>
+	
+	<section>
+		<h2>Welcome to My ePortfolio</h2>
+		<img src="image/profile.jpg" alt="My Photo" width="500">
+		<p>Hi, I'm Liew Chen Chen, currently a full-time Master in Information Technology Management (MITM) student at UNIMAS. Here, I share more about myself, including my Basic Information, Educational Background, Working Experience, and Skills. Feel free to explore and learn more about my journey, experiences, and interests.</p>
+	</section>
+
+    <section>
+        <h3>Get in Touch</h3>
+        <form action="submit.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+	
+	<footer>
+		<p>&copy; 2025 ChenChen's ePortfolio</p>
+	</footer>
+	
+</body>
+</html>

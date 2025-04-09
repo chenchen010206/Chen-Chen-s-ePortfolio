@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Background</title>
+	<link id="theme-style" rel="stylesheet" href="css/style1.css">
+</head>
+<body id="educational-background-page">
+    <header>
+        <h1>Educational Background</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+				<li><a href="information.html">Basic Information</a></li>
+                <li><a href="interest.html">Personal Interest</a></li>
+                <li><a href="education.html">Educational Background</a></li>
+                <li><a href="experience.html">Working Experience</a></li>
+                <li><a href="journey.html">Journey</a></li>
+            </ul>
+			<button class="theme-switch" onclick="switchTheme()">Switch Theme</button>
+        </nav>
+    </header>
+	
+	<script>
+    function switchTheme() {
+        let themeLink = document.getElementById("theme-style");
+        let currentTheme = themeLink.getAttribute("href") === "css/style1.css" ? "css/style2.css" : "css/style1.css";
+
+        themeLink.setAttribute("href", currentTheme);
+        localStorage.setItem("theme", currentTheme);
+    }
+
+    // Load saved theme on page load
+    window.onload = function() {
+        let savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+            document.getElementById("theme-style").setAttribute("href", savedTheme);
+        }
+    };
+	</script>
+
+    <section class="education-container">
+    <div class="card">
+        <img src="image/kindergarten.jpg" alt="Kindergarten">
+        <div class="card-content">
+            <h3>Kindergarten Education</h3>
+            <p>📍 Sarawak Buddhist Association Kindergarten</p>
+            <p>📅 2006-2007</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="image/primary.jpg" alt="Primary School">
+        <div class="card-content">
+            <h3>Primary Education</h3>
+            <p>📍 SJK (C) Chung Hua No.5</p>
+            <p>📅 2008-2013</p>
+            <p>🎓 UPSR: 5A 2B</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="image/secondary.jpg" alt="Secondary School">
+        <div class="card-content">
+            <h3>Secondary Education</h3>
+            <p>📍 SMK Bandar Kuching No.1</p>
+            <p>📅 2014-2018</p>
+            <p>🎓 SPM: 5A 2B+ 1B 2C+</p>
+            <p>🏋️‍♀️ Activities: Marching Band, SPBT Club, Ping Pong</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="image/preuni.jpg" alt="Pre-University">
+        <div class="card-content">
+            <h3>Pre-University Education</h3>
+            <p>📍 SMK Pending</p>
+            <p>📅 2019-2020</p>
+            <p>🎓 STPM: CGPA 4.00, MUET Band 4</p>
+            <p>🏋️‍♀️ Activities: St. John Ambulance, STEM Club</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="image/degree.jpg" alt="Undergraduate">
+        <div class="card-content">
+            <h3>Undergraduate Education</h3>
+            <p>📍 University of Malaysia Sarawak (UNIMAS)</p>
+            <p>📅 2021-2024</p>
+            <p>🎓 Bachelor in Finance with Honours</p>
+            <p>📋 CGPA: 3.85, First-Class Degree</p>
+            <p>🏆 Dean’s List for all 6 semesters</p>
+            <p>💰 Sarawak Energy Scholarship</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="image/master.png" alt="Postgraduate">
+        <div class="card-content">
+            <h3>Postgraduate Education</h3>
+            <p>📍 University of Malaysia Sarawak (UNIMAS)</p>
+            <p>📅 2024-Present</p>
+            <p>🎓 Master in Information Technology Management (MITM)</p>
+            <p>📋 Current CGPA: 3.65</p>
+        </div>
+    </div>
+</section>
+
+
+    <footer>
+        <p>&copy; 2025 ChenChen's ePortfolio</p>
+    </footer>
+</body>
+</html>
+	

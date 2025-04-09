@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journey</title>
+	<link id="theme-style" rel="stylesheet" href="css/style1.css">
+</head>
+<body id="journey-page">
+    <header>
+        <h1>Journey</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+				<li><a href="information.html">Basic Information</a></li>
+                <li><a href="interest.html">Personal Interest</a></li>
+                <li><a href="education.html">Educational Background</a></li>
+                <li><a href="experience.html">Working Experience</a></li>
+                <li><a href="journey.html">Journey</a></li>
+            </ul>
+			<button class="theme-switch" onclick="switchTheme()">Switch Theme</button>
+        </nav>
+    </header>
+	
+	<script>
+    function switchTheme() {
+        let themeLink = document.getElementById("theme-style");
+        let currentTheme = themeLink.getAttribute("href") === "css/style1.css" ? "css/style2.css" : "css/style1.css";
+
+        themeLink.setAttribute("href", currentTheme);
+        localStorage.setItem("theme", currentTheme);
+    }
+
+    // Load saved theme on page load
+    window.onload = function() {
+        let savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+            document.getElementById("theme-style").setAttribute("href", savedTheme);
+        }
+    };
+	</script>
+
+<section>
+    <div class="achievement-card">
+    <h2 class="title">Kuching Town School Band</h2>
+
+    <div class="band-gallery">
+        <img src="image/band.jpg" alt="Band">
+        <img src="addedmediaband/band1.jpg" alt="Band">
+        <img src="addedmediaband/band2.jpg" alt="Band">
+        <img src="addedmediaband/band3.jpg" alt="Band">
+        <img src="addedmediaband/band4.jpg" alt="Band">
+        <img src="addedmediaband/band5.jpg" alt="Band">
+        <img src="addedmediaband/band6.jpg" alt="Band">
+        <img src="addedmediaband/band7.jpg" alt="Band">
+        <img src="addedmediaband/band8.jpg" alt="Band">
+        <img src="addedmediaband/band9.jpg" alt="Band">
+        <img src="addedmediaband/band10.jpg" alt="Band">
+        <img src="addedmediaband/band11.jpg" alt="Band">
+    </div>
+	
+	<div class="video-wrapper">
+	<iframe 
+		src="https://www.youtube.com/embed/a8mMLqT_kVQ" 
+		title="Kuching Town School Band Video" 
+		frameborder="0" 
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+		allowfullscreen>
+	</iframe>
+	</div>
+
+    <p>​During my secondary school years from 2014 to 2018, I was an active member of the Kuching Town School Band, playing the clarinet. Throughout this period, I took on several leadership roles, including Assistant Woodwind Leader, Woodwind Leader, and Secretary. My dedication was recognized with the Best Girl Award, which I was honored to receive twice.</p>
+    <p>I participated in numerous performances, such as the annual school orientation and sports day events, where we welcomed new students and energized the crowd. Additionally, I performed in the yearly Wesak Day parade, contributing to the cultural celebrations. In 2016, I had the privilege of representing our band at the National Youth Day (Hari Belia Negara) celebration, a significant event organized by Malaysia's Ministry of Youth and Sports to honor the contributions of young people to the nation.</p>
+    <p>Being part of the Kuching Town School Band not only enhanced my musical abilities but also instilled in me valuable lessons in leadership, teamwork, and discipline. These experiences have left an indelible mark on my personal growth and development.</p>
+	</div>
+
+    <div class="achievement-card">
+    <h2 class="title">SULAM Project</h2>
+
+    <div class="sulam-gallery">
+        <img src="image/sulam.jpg" alt="Sulam">
+        <img src="addedmediasulam/sulam1.jpg" alt="Sulam">
+    </div>
+	
+        <p>As part of my bachelor's degree program, I participated in the SULAM project, a compulsory initiative that integrates academic learning with community engagement. I served as the Secretary, managing documentation, coordination, and communication to ensure the project's smooth execution.</p>
+        <p>Our project was conducted at SMK Wira Penrissen, where we delivered finance-related knowledge to the students. Through interactive sessions and activities, we aimed to enhance their understanding of financial concepts, equipping them with essential skills for managing personal finances and making informed financial decisions.</p>
+        <p>This experience not only allowed me to apply my academic knowledge in a practical setting but also strengthened my leadership, teamwork, and communication skills. It was a rewarding opportunity to contribute to the community while gaining valuable hands-on experience.</p>
+    </div>
+
+    <div class="achievement-card">
+        <h2 class="title">STPM 4.00 CGPA Award</h2>
+		
+	<div class="stpm-gallery">
+        <img src="image/4flat.jpg" alt="4Flat">
+		<img src="addedmediastpm/stpm1.jpg" alt="4Flat">
+		<img src="addedmediastpm/stpm2.jpg" alt="4Flat">
+		<img src="addedmediastpm/stpm3.jpg" alt="4Flat">
+	</div>
+	
+	<div class="video-wrapper">
+	<iframe 
+		src="https://www.youtube.com/embed/Erf1ohEYZTI" 
+		title="STPM CGPA 4.00 Video" 
+		frameborder="0" 
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+		allowfullscreen>
+	</iframe>
+	</div>
+
+			
+        <p>In 2020, I proudly completed my Sijil Tinggi Persekolahan Malaysia (STPM) at SMK Pending, attaining a CGPA of 4.00 with A grades in all subjects - Pengajian Am, Bahasa Melayu, Pengajian Perniagaan, and Ekonomi. This achievement reflects my strong analytical, research, and critical thinking skills.</p>
+        <p>Excelling in this rigorous pre-university program required dedication, resilience, and a deep understanding of business, economics, and language studies. The knowledge and skills gained during this period became a solid foundation for my further studies in finance and business.</p>
+        <p>Achieving a CGPA of 4.00 in STPM remains one of my proudest academic milestones, reinforcing my commitment to lifelong learning and continuous self-improvement.</p>
+    </div>
+
+    <div class="achievement-card">
+        <h2 class="title">Sarawak Energy Scholarship</h2>
+		
+	<div class="sholar-gallery">
+        <img src="image/scholar.jpg" alt="Scholar">
+		<img src="addedmediascholar/scholar1.jpg" alt="Scholar">
+	</div>
+	
+	<div class="video-wrapper">
+	<iframe 
+		src="https://www.youtube.com/embed/K-c3MG6dj6M" 
+		title="Sarawak Energy Scholarship Award Ceremony Video" 
+		frameborder="0" 
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+		allowfullscreen>
+	</iframe>
+	</div>
+
+        <p>I was awarded the Sarawak Energy Scholarship in 2023 after successfully passing several assessment stages. This scholarship provided financial support throughout my bachelor's degree studies, allowing me to focus on academic and professional growth.</p>
+        <p>As a scholar, I had the privilege of attending the Sarawak Energy Scholarship Award Ceremony, where I connected with fellow scholars and industry professionals. This recognition has been instrumental in shaping my academic journey and reinforcing my commitment to excellence in the field of finance and beyond.</p>
+    </div>
+
+    <div class="achievement-card">
+        <h2 class="title">Bachelor's Degree Graduation Ceremony</h2>
+	
+	<div class="degree-gallery">	
+        <img src="image/graduate.jpg" alt="Graduate">
+		<img src="addedmediadegree/degree1.jpg" alt="Graduate">
+		<img src="addedmediadegree/degree2.jpg" alt="Graduate">
+		<img src="addedmediadegree/degree3.jpg" alt="Graduate">
+	</div>
+	
+	<div class="video-wrapper">
+	<iframe 
+		src="https://www.youtube.com/embed/8jHGH3V6UV4" 
+		title="Bachelor's Degree Graduation Ceremony Video" 
+		frameborder="0" 
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+		allowfullscreen>
+	</iframe>
+	</div>
+		
+        <p>In 2024, I proudly graduated from Universiti Malaysia Sarawak (UNIMAS) with a Bachelor in Finance with Honours, achieving a final CGPA of 3.85. Throughout my academic journey, I consistently excelled in my studies, earning the Dean’s List Award for all six semesters.</p>
+        <p>My semester-wise GPA progression reflects my dedication and commitment to academic excellence: Semester 1: 3.67, Semester 2: 3.97, Semester 3: 3.79, Semester 4: 3.95, Semester 5: 3.97, and Semester 6: 3.75. Maintaining strong academic performance across all semesters required perseverance, discipline, and a passion for finance.</p>
+        <p>Graduating with these achievements marks a significant milestone in my academic journey and prepares me for future opportunities in the financial and business sectors.</p>
+    </div>
+</section>
+
+
+    <footer>
+        <p>&copy; 2025 ChenChen's ePortfolio</p>
+    </footer>
+</body>
+</html>
+		
+		
