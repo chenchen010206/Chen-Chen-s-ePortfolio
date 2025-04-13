@@ -40,6 +40,26 @@
     };
 	</script>
 
+<main>
+    <!-- 🔊 Button to Start Background Music -->
+    <button onclick="playMusic()" style="position: fixed; bottom: 10px; right: 10px; z-index: 1000;">
+        ▶️ Play Music
+    </button>
+
+    <div id="music-player" style="display: none;"></div>
+</main>
+
+<script>
+function playMusic() {
+    const player = document.getElementById('music-player');
+    player.innerHTML = `
+        <iframe width="0" height="0"
+            src="https://www.youtube.com/embed/MJt_Z11Ug8E?autoplay=1&loop=1&playlist=MJt_Z11Ug8E"
+            frameborder="0" allow="autoplay"></iframe>
+    `;
+}
+</script>
+	
 <section>
     <div class="achievement-card">
     <h2 class="title">Kuching Town School Band</h2>
